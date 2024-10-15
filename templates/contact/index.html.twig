@@ -1,17 +1,46 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ContactController!{% endblock %}
+{% block title %}Contact Book!{% endblock %}
 
 {% block body %}
 <style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+
 </style>
 
-<div class="example-wrapper">
-    <h1>Hello! ✅</h1></br>
-    <button class="btn btn-primary">Test</button>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 p-4">
+            <h2>Contact Book</h2>
+            <hr>
+        </div>
+    </div>
+    <div class="d-flex justify-content-between">
+        <div>
+            <input type="checkbox"  name="selector" /> Select All
+            <button class="btn btn-light">Delete Select</button>
+        </div>
+        <button class="btn btn-light">New Contact</button>
+    </div>
 
-
+    <table class="table mt-4">
+        <thead>
+            <tr>
+                 <th scope="col"></th>
+                 <th scope="col">Name</th>
+                 <th scope="col">Email</th>
+                 <th scope="col">Phone Numbers</th>
+                 <th scope="col">Birth Day</th>
+            </tr>
+        </thead>
+            <tbody>
+                <tr>
+                    <th scope="row"><input type="checkbox" name="selected"/></th>
+                    <td>John Doe</td>
+                    <td>wassim@gmail.com</td>
+                    <td>01233454</td>
+                    <td>01/01/1994</td>
+                </tr>
+            </tbody>
+    </table>
 </div>
 {% endblock %}
